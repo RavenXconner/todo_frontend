@@ -1,0 +1,178 @@
+/* Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #56ccf2, #2f80ed);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.App {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 25px;
+  border-radius: 20px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(15px);
+  text-align: center;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+body.dark h1 {
+  color: #fff;
+}
+
+/* Input Styles */
+input[type="text"] {
+  padding: 12px;
+  border-radius: 30px;
+  border: 2px solid #56ccf2;
+  background: #fff;
+  width: 70%;
+  font-size: 1rem;
+  color: #333; /* Ensures dark text in light mode */
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #2f80ed;
+  outline: none;
+}
+
+body.dark input[type="text"] {
+  background: #333;
+  color: white; /* Ensures light text in dark mode */
+  border-color: #444;
+}
+
+/* Button Styles */
+button {
+  padding: 12px 20px;
+  border-radius: 30px;
+  background: #56ccf2;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+button:hover {
+  background: #2f80ed;
+  transform: translateY(-3px);
+}
+
+button.delete {
+  background: #e74c3c;
+}
+
+button.delete:hover {
+  background: #c0392b;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Filters Section */
+.filters {
+  margin-top: 30px;
+}
+
+.filters button {
+  padding: 10px 15px;
+  background: #3387ee;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filters button:hover {
+  background: #3387ee;
+  color: white;
+}
+
+.filters button.active {
+  background: #2f80ed;
+  color: white;
+}
+
+/* Todo List Section */
+ul.todo-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.todo-item {
+  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 30px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.3s;
+  color: #333; /* Ensures dark text in light mode */
+}
+
+.todo-item:hover {
+  transform: translateY(-3px);
+  background: #f5f5f5;
+}
+
+.todo-item.completed span {
+  text-decoration: line-through;
+  color: #777;
+}
+
+body.dark .todo-item {
+  background: #444;
+  color: white; /* Ensures light text in dark mode */
+}
+
+.todo-item.completed span {
+  color: #777; /* For both modes */
+}
+
+/* Dark Mode Styles */
+body.dark {
+  background: linear-gradient(135deg, #2f80ed, #56ccf2);
+}
+
+body.dark .App {
+  background: rgba(18, 18, 18, 0.85);
+  color: white;
+}
+
+body.dark button {
+  background: #444;
+}
+
+body.dark button:hover {
+  background: #222;
+}
+
+body.dark .filters button {
+  background: #333;
+}
+
+body.dark .filters button:hover {
+  background: #444;
+}
