@@ -52,7 +52,6 @@ function App() {
       .then(() => setTodos(todos.filter(todo => todo.id !== id)))
       .catch(error => console.error('Error deleting todo:', error));
   };
-  
 
   const editTodo = (id, text) => {
     setIsEditing(id);
