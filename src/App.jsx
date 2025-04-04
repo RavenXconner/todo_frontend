@@ -47,10 +47,12 @@ function App() {
   };
 
   const deleteTodo = (id) => {
+    console.log('Deleting todo with ID:', id);  // Debug log
     axios.delete(`${API_URL}${id}/`)
       .then(() => setTodos(todos.filter(todo => todo.id !== id)))
       .catch(error => console.error('Error deleting todo:', error));
   };
+  
 
   const editTodo = (id, text) => {
     setIsEditing(id);
