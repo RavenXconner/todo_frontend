@@ -1,4 +1,3 @@
-/* Global Styles */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 body {
@@ -35,7 +34,7 @@ body.dark h1 {
   color: #fff;
 }
 
-/* Input Styles */
+
 input[type="text"] {
   padding: 12px;
   border-radius: 30px;
@@ -43,7 +42,7 @@ input[type="text"] {
   background: #fff;
   width: 70%;
   font-size: 1rem;
-  color: #333; /* Ensures dark text in light mode */
+  color: #333; 
   transition: all 0.3s ease;
 }
 
@@ -54,11 +53,10 @@ input[type="text"]:focus {
 
 body.dark input[type="text"] {
   background: #333;
-  color: white; /* Ensures light text in dark mode */
+  color: white; 
   border-color: #444;
 }
 
-/* Button Styles */
 button {
   padding: 12px 20px;
   border-radius: 30px;
@@ -88,7 +86,6 @@ button:focus {
   outline: none;
 }
 
-/* Filters Section */
 .filters {
   margin-top: 30px;
 }
@@ -129,7 +126,7 @@ ul.todo-list {
   border-radius: 30px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s, transform 0.3s;
-  color: #333; /* Ensures dark text in light mode */
+  color: #333;
 }
 
 .todo-item:hover {
@@ -144,14 +141,13 @@ ul.todo-list {
 
 body.dark .todo-item {
   background: #444;
-  color: white; /* Ensures light text in dark mode */
+  color: white;
 }
 
 .todo-item.completed span {
-  color: #777; /* For both modes */
+  color: #777;
 }
 
-/* Dark Mode Styles */
 body.dark {
   background: linear-gradient(135deg, #2f80ed, #56ccf2);
 }

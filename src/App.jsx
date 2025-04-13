@@ -6,7 +6,8 @@ import TodoList from './components/TodoList';
 import TodoFilters from './components/TodoFilters';
 import DarkModeToggle from './components/DarkModeToggle';
 
-const API_URL = 'http://127.0.0.1:8000/api/todos/';
+const API_URL = 'https://todo-backend-i7yq.onrender.com/api/todos/';
+
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -47,7 +48,7 @@ function App() {
   };
 
   const deleteTodo = (id) => {
-    console.log('Deleting todo with ID:', id);  // Debug log
+    console.log('Deleting todo with ID:', id);  
     axios.delete(`${API_URL}${id}/`)
       .then(() => setTodos(todos.filter(todo => todo.id !== id)))
       .catch(error => console.error('Error deleting todo:', error));
